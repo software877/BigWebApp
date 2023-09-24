@@ -13,3 +13,8 @@ def index(request):
 def results(request, user_id):
     response = "You're looking at the results of user %s."
     return HttpResponse(response % user_id)
+
+def test(request):
+    template = loader.get_template("polls/test.html")
+    context = {}
+    return HttpResponse(template.render(context, request))
