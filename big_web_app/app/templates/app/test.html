@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Привет Django!</title>
+</head> 
+<body> 
+<h1>Bы на главной странице Django!</h1>
+<br>
+Мое имя - {{ first_name }} . Моя фамилия - {{ last_name }} .
+
+{% for langs in lang_list %}
+    <li>{{ langs }}</li>
+{% endfor %}
+
+</body>
+</html>

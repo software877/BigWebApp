@@ -4,7 +4,7 @@ from .models import BetaUser
 
 def index(request):
     latest_question_list = BetaUser.objects.order_by("-reg_date")[:5]
-    template = loader.get_template("polls/index.html")
+    template = loader.get_template("app/index.html")
     context = {
         "latest_question_list": latest_question_list,
     }
@@ -15,6 +15,7 @@ def results(request, user_id):
     return HttpResponse(response % user_id)
 
 def test(request):
-    template = loader.get_template("polls/test.html")
-    context = {}
+    template = loader.get_template("app/test.html")
+    lang_list = ["English", "German", "Russian"]
+    context = {"first_name": "Ivan", "last_name": "Ivanov", "lang_list": lang_list}
     return HttpResponse(template.render(context, request))
