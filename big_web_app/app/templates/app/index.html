@@ -1,9 +1,21 @@
-{% if latest_question_list %}
-    <ul>
-    {% for question in latest_question_list %}
-        <li><a href="{% url 'polls:results' question.id %}">{{ question.first_name }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <script defer src="/static/js/bootstrap.bundle.min.js"></script>
+    <title>Привет Django!</title>
+</head>
+<body class="container">
+    <span>Это главная страница!!!</span>
+    <br>
+    <button class="btn btn-danger" onclick="test()">Click Me!!!</button>
+
+    <script>
+        function test() {
+            console.log("The button was clicked!!!");
+        }
+    </script>
+</body>
+</html>
