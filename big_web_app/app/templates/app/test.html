@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <script defer src="/static/js/bootstrap.bundle.min.js"></script>
     <title>Привет Django!</title>
 </head> 
-<body> 
+<body class="container">
 <h1>Bы на главной странице Django!</h1>
+<br>
+<button type="button" class="btn btn-danger">Danger</button>
 <br>
 Мое имя - {{ first_name }} . Моя фамилия - {{ last_name }} .
 
