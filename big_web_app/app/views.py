@@ -19,3 +19,8 @@ def test(request):
     lang_list = ["English", "German", "Russian"]
     context = {"first_name": "Ivan", "last_name": "Ivanov", "lang_list": lang_list}
     return HttpResponse(template.render(context, request))
+
+def your_name(request):
+    template = loader.get_template("app/your_name.html")
+    context = {"your_name": request.POST.get('your_name', '')}
+    return HttpResponse(template.render(context, request))
