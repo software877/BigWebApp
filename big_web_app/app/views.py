@@ -24,3 +24,8 @@ def your_name(request):
     template = loader.get_template("app/your_name.html")
     context = {"your_name": request.POST.get('your_name', '')}
     return HttpResponse(template.render(context, request))
+
+def player(request):
+    template = loader.get_template("app/player.html")
+    context = {}
+    return HttpResponse(template.render(context, request))

@@ -8,5 +8,5 @@ urlpatterns = [
     path("<int:user_id>/results/", views.results, name="results"),
     path("test/", views.test, name="test"),
     path("your-name/", views.your_name, name="your_name"),
-
+    path("player/", views.player, name="player"),
 ]

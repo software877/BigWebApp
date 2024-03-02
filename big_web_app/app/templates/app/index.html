@@ -13,10 +13,11 @@
     <button class="btn btn-danger" onclick="test()">Click Me!!!</button>
 
     <form action="/app/your-name/" method="post">{% csrf_token %}
-    <label for="your_name">Your name: </label>
-    <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
-    <input type="submit" value="OK">
-</form>
+        <label for="your_name">Your name: </label>
+        <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+        <input type="submit" value="OK">
+    </form>
+    <button class="btn btn-danger" onclick="location.href = '/app/player'">Player</button>
 
     <script>
         function test() {
